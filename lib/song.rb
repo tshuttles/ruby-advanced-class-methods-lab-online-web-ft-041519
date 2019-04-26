@@ -43,10 +43,9 @@ class Song
   end 
   
   def self.new_from_filename(name)
-    artist_name, name = name.chomp(".mp3").split(" - ")
-    song = self.new_by_name(name)
-    song.artist_name = artist_name
-    song
+    song = Song.new 
+    song = song.chomp(".mp3") puts "#{artist_name} - #{name}"
+    song 
   end 
   
   def self.destroy_all 
